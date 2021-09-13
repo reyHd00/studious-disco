@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrusel</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+    <!-- JQUERY -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+</head>
+
+<body>
+    <!--encabezado-->
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper black">
+                <a href="index.html" class="brand-logo">Environmental</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="acercade.html">Blog</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="singin.html">Sing in</a></li>
+                    <li><a href="carrusel.html">Carrusel</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- container -->
+    <div class="container">
+        <h3>Historia del arte</h3>
+        <div class="carousel" id="demo-carousel">
+            <a class="carousel-item" href="#one!"><img
+                    src="https://historia.nationalgeographic.com.es/medio/2020/05/12/las-meninas-1_aafe3c4f_672x767.jpg"></a>
+            <a class="carousel-item" href="#two!"><img
+                    src="https://historia.nationalgeographic.com.es/medio/2019/06/26/04-soberano-musulman_820760c0_480x682.jpg"></a>
+            <a class="carousel-item" href="#three!"><img
+                    src="https://historia.nationalgeographic.com.es/medio/2019/07/16/04-estatuilla-madera-sarawak-raja-james-brooke_ecb30dc9_459x800.jpg"></a>
+            <a class="carousel-item" href="#four!"><img
+                    src="https://historia.nationalgeographic.com.es/medio/2019/04/10/escena-de-suicidio-grabado-ingles-siglo-xviii_bc561798_533x799.jpg"></a>
+            <a class="carousel-item" href="#five!"><img
+                    src="https://historia.nationalgeographic.com.es/medio/2019/03/28/17-duquesa-de-alba-goya_cd6e7ae4_525x800.jpg"></a>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('#demo-carousel').carousel();
+        });
+    </script>
+    <!--Pie de pagina-->
+    <footer class="page-footer lime darken-4">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Quieres conocer mas</h5>
+                    <p class="grey-text text-lighten-4">
+                        Esta pagina fue hecha con fines de practica e implemntacion para desarrollar pafinas web que
+                        ofrezcan una vista amigable al usuario, la informacion obtenida es con fines de practica.
+                    </p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Visitanos en:</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="https://fca.uacam.mx/view/paginas/40">FDI -
+                                UAC</a></li>
+                        <li><a class="grey-text text-lighten-3" href="https://materializecss.com/">materialize</a></li>
+                        <li><a class="grey-text text-lighten-3" href="https://github.com/">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2021 Copyright Text
+                <a class="grey-text text-lighten-4 right" href="https://www.youtube.com/watch?v=5qap5aO4i9A">Mas
+                    informacion</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
