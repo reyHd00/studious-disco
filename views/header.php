@@ -17,9 +17,9 @@
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="?menu=home">Inicio</a></li>
                     <li><a href="?menu=acercade">Blog</a></li>
-                    <li><a href="?menu=login.php">Login</a></li>
-                    <li><a href="?menu=singin.php">Sing in</a></li>
-                    <li><a href="?menu=carrusel.php">Carrusel</a></li>
+                    <li><a href="?menu=login">Login</a></li>
+                    <li><a href="?menu=registarse">Sing in</a></li>
+                    <li><a href="?menu=carrusel">Carrusel</a></li>
                 </ul>
             </div>
         </nav>
