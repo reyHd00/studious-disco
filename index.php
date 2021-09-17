@@ -17,9 +17,8 @@
     <!--encabezado-->
     <?php include 'views/header.php' ?>
     <!--contenedor-->
-    <div class="container">
-    <?php include 'controller/routing.php' ?>
-    </div>
+    
+    <?php include 'controller/routing.php' ?
     <!--Pie de pagina-->
     <?php include 'views/footer.php' ?>
     
