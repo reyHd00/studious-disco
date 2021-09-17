@@ -18,7 +18,7 @@
     <?php include 'views/header.php' ?>
     <!--contenedor-->
     
-    <?php include 'controller/routing.php' ?
+    <?php include 'controller/routing.php' ?>
     <!--Pie de pagina-->
     <?php include 'views/footer.php' ?>
     
