@@ -20,6 +20,8 @@
                     <li><a href="?menu=login">Login</a></li>
                     <li><a href="?menu=registarse">Sing in</a></li>
                     <li><a href="?menu=carrusel">Carrusel</a></li>
+                    <li><a href="?menu=usuario">Usuario</a></li>
+                    <li><a href="?menu=usuario">Alumno</a></li>
                 </ul>
             </div>
         </nav>
