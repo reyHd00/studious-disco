@@ -7,7 +7,7 @@ class Alumno {
     public $turno;
 
     public function __construct($id_alumno, $grupo, $carrera, $turno) {
-        $this->id = $id;
+        $this->id = $id_alumno;
         $this->grupo = $nombre;
         $this->carrera = $carrera;
         $this->turno = $turno;
