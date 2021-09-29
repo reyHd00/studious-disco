@@ -1,10 +1,10 @@
 <?php
-include('conect_db.php');
+include('conectadb.php');
 class Usuario {
     public $id_usuario;
-    public $nombre;
-    public $apellido;
-    public $telefono;
+    public $user;
+    public $pass;
+    
 
     public function __construct($id_usuario, $nombre, $apellido, $telefono) {
         $this->id = $id_usuario;
@@ -14,16 +14,17 @@ class Usuario {
     }
     public static function consultar() {
 
-        $mysqli = conect_db::dbmysql();
+        $mysqli = conectadb::dbmysql();
         $consulta = "select * from usuario";
         echo ('<br>');
         // echo ($consulta);
         $resultado = mysqli_query($mysqli, $consulta);
-        echo 'no se hizo la consulta ';
+        
         if (!$resultado) {
             echo 'No pudo Realizar la consulta a la base de datos';
             exit;
         }
+        
         $listaUsuario = [];
         
         while ($usuario = mysqli_fetch_array($resultado)) {

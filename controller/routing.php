@@ -28,14 +28,16 @@ switch ($var_getMenu) {
     case "usuario":
         include_once './models/usuario.php';
         $sqlUsuario = Usuario::consultar();
-        include_once './models/consulta.php';
+        include_once './views/viewUsuario.php';
         break;
     case "alumno":
         include_once './models/alumno.php';
         $sqlAlumno = Alumno::consultar();
-        include_once './models/consulta02.php';
+        include_once './views/viewAlumno.php';
         break;
-    
+    case "bienvenido":
+        require_once ('./views/bienvenido.php');
+        break;
     default:
         require_once('./views/home.php');
 }

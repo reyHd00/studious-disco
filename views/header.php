@@ -18,10 +18,10 @@
                     <li><a href="?menu=home">Inicio</a></li>
                     <li><a href="?menu=acercade">Blog</a></li>
                     <li><a href="?menu=login">Login</a></li>
-                    <li><a href="?menu=registarse">Sing in</a></li>
+                    <li><a href="?menu=registrarse">Sing in</a></li>
                     <li><a href="?menu=carrusel">Carrusel</a></li>
                     <li><a href="?menu=usuario">Usuario</a></li>
-                    <li><a href="?menu=usuario">Alumno</a></li>
+                    <li><a href="?menu=alumno">Alumno</a></li>
                 </ul>
             </div>
         </nav>

@@ -17,12 +17,14 @@
 
     <!--contenedor-->
     <div class="container">
+          
         <div class="row">
+       
             <div class="col s12 m6 offset-m4">
                 <h1 class="center-align">Iniciar sesion</h1>
             </div>
             <div class="col s12 m6 offset-m4">
-                <form action="index.html" method="get">
+                <form action="./controller/login.php" method="post">
                     <div class="row card-panel z-depth-4">
                         <div class="input-field col s12">
                             <i class="material-icons prefix">account_circle</i>
@@ -31,7 +33,7 @@
                         </div>
                         <div class="input-field col s12">
                             <i class="material-icons prefix">fingerprint</i>
-                            <input type="password" id="pswd" name="pswd" class="validate" placeholder="Contraseña:"
+                            <input type="password" id="password" name="password" class="validate" placeholder="Contraseña:"
                                 required />
                         </div>
                         <button class="btn blue right">
