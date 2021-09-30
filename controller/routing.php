@@ -25,11 +25,6 @@ switch ($var_getMenu) {
     case "carrusel":
         require_once('./views/carrusel.php');
         break;
-    case "usuario":
-        include_once './models/usuario.php';
-        $sqlUsuario = Usuario::consultar();
-        include_once './views/viewUsuario.php';
-        break;
     case "alumno":
         include_once './models/alumno.php';
         $sqlAlumno = Alumno::consultar();
