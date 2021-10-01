@@ -1,29 +1,25 @@
-<!DOCTYPE html>
-<html lang="es">
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Login</title>
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
-</head>
-
-<body>
-    <!--encabezado-->
-
-    <!--contenedor-->
-    <div class="container">
+<!--contenedor-->
+<div class="container">
           
-        <div class="row">
+    <div class="row">
        
-            <div class="col s12 m6 offset-m4">
-                <h1 class="center-align">Iniciar sesion</h1>
-            </div>
-            <div class="col s12 m6 offset-m4">
+        <div class="col s12 m6 offset-m4">
+            <h1 class="center-align">Iniciar sesion</h1>
+        </div>
+        <div class="col s12 m6 offset-m4">
+            <?php
+            $estado_session = session_status();
+            if($estado_session == PHP_SESSION_NONE){
+                session_start();
+            }
+            if (isset($_SESSION['loggedUserName'])) {
+                ?>
+                <h3>No tiene permisos para entrar a la página <h3>
+                <?php
+            }else {
+                ?>
+                <br />
                 <form action="./controller/login.php" method="post">
                     <div class="row card-panel z-depth-4">
                         <div class="input-field col s12">
@@ -42,13 +38,9 @@
                         </button>
                     </div>
                 </form>
-            </div>
+                <?php 
+            }?>
         </div>
     </div>
+</div>
     <!-- pie de pagina -->
-
-    <!--JavaScript at end of body for optimized loading-->
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-</body>
-
-</html>

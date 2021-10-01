@@ -33,9 +33,18 @@ switch ($var_getMenu) {
     case "bienvenido":
         require_once ('./views/bienvenido.php');
         break;
+    case "logout":
+        $session_destroy = session_destroy();
+        header("location: ./index.php?menu=home");
+        break;
+    case "deletealumno":
+        $_idalumno = trim(filter_input(INPUT_GET, 'idalumno'));
+        // $_idalumno = isset($_GET['idalumno']) ? $_GET['idalumno'] : '0';
+        require_once ('./models/alumno.php');
+        $sqlAlumno = Alumno::delete($_idalumno);
+        header("location: ./index.php?menu=alumno");
+        break;
     default:
         require_once('./views/home.php');
 }
-
-
 ?>

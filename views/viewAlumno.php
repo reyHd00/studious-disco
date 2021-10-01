@@ -21,13 +21,14 @@
             
             <td>
             <button class="btn waves-effect waves-light red" type="submit" name="action">
-            <i class="material-icons right">delete</i>
-            </button>
+            <a href="?menu=deletealumno&idalumno=<?php echo $alumnoview->id; ?>">
+            <i class="material-icons right white-text">delete</i></a>
             <button class="btn waves-effect waves-light" type="submit" name="action">
             <i class="material-icons right">edit</i>
             </button>
             </td>
             </tr>
-        <?php } ?>
+            <?php 
+        } ?>
 </tbody>
 </table>

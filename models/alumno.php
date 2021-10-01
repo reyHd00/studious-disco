@@ -40,19 +40,26 @@ class Alumno {
         $resultado = $stmt->get_result();
         while ($filasql = mysqli_fetch_array($resultado)) {
         // Imprimir por Arreglo Asociado
-        echo $filasql['user'] . ' ';
-        echo $filasql['pass'] . ' ';
+            echo $filasql['user'] . ' ';
+            echo $filasql['pass'] . ' ';
         // initialize session variables
-        session_start();
+            session_start();
         // $_SESSION['loggedDataTime'] = datatime();
-        $_SESSION['loggedUserName'] = $filasql['user'] ;
+            $_SESSION['loggedUserName'] = $filasql['user'] ;
         }
         $acceso = false;
         if ($stmt->affected_rows == 1) {
-        $acceso = true;
+            $acceso = true;
         }
         $mysqli->close();
         return $acceso;
+    }
+    public static function delete($_idalumno) {
+        $mysqli = conectadb::dbmysql();
+        $stmt = $mysqli->prepare('DELETE FROM alumno WHERE id_alumno = ? ');
+        $stmt->bind_param('i', $_idalumno);
+        $stmt->execute();
+        $resultado = $stmt->get_result();
     }
 }
 ?>
