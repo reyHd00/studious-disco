@@ -61,5 +61,30 @@ class Alumno {
         $stmt->execute();
         $resultado = $stmt->get_result();
     }
+    public static function consultarAlumno($_idalumno) {
+        $mysqli = conectadb::dbmysql();
+        $stmt = $mysqli->prepare('SELECT * FROM alumno WHERE id_alumno = ?');
+        $stmt->bind_param('i', $_idalumno);
+        $stmt->execute();
+        $resultado = $stmt->get_result();
+        $fila = $resultado->fetch_array();
+        return $fila;
+    }
+  
+    public static function edit($_grupo,$_carrera,$_turno,$_idalumno) {
+        $mysqli = conectadb::dbmysql();
+        $stmt =$mysqli->prepare ('UPDATE alumno SET grupo =?, carrera =?, turno=? 
+        WHERE id_alumno =? ');
+        $stmt->bind_param("ssi",$_grupo,$_carrera,$_turno,$_idalumno);
+        $stmt -> execute();
+        $resultado = $stmt->get_result();
+        $acceso = false;
+         if ($stmt->affected_rows == 1) {
+           $acceso = true;
+        }
+        $mysqli->close();
+        return $acceso;
+        
+    }
 }
 ?>

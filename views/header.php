@@ -1,4 +1,3 @@
-
 <?php
 $estado_session = session_status();
 if($estado_session == PHP_SESSION_NONE)
@@ -38,7 +37,6 @@ if (isset($_SESSION['loggedUserName'])) {
                     <li><a href="?menu=registrarse">Sing in</a></li>
                     <li><a href="?menu=carrusel">Carrusel</a></li>
                     
-                    <li><a href="?menu=alumno">Alumno</a></li>
                 </ul>
             </div>
         </nav>

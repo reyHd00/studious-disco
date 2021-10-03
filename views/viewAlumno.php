@@ -23,7 +23,8 @@
             <button class="btn waves-effect waves-light red" type="submit" name="action">
             <a href="?menu=deletealumno&idalumno=<?php echo $alumnoview->id; ?>">
             <i class="material-icons right white-text">delete</i></a>
-            <button class="btn waves-effect waves-light" type="submit" name="action">
+            <button class="btn waves-effect waves-light yellow" type="submit" name="action">
+            <a href="?menu=editalumno&idalumno=<?php echo $alumnoview->id; ?>">
             <i class="material-icons right">edit</i>
             </button>
             </td>
@@ -31,4 +32,10 @@
             <?php 
         } ?>
 </tbody>
+</table>
+
+<table class="nuevo">
+    <button class="btn waves-effect waves-light blue" type="submit" name="action">
+    <a href="?menu=insertalumno&idalumno=<?php echo $alumnoview-> id;?>">
+    <i class="material-icons right white-text">add</i></a>
 </table>
