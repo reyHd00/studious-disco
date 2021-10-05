@@ -49,11 +49,13 @@ switch ($var_getMenu) {
             require_once ('./models/alumno.php');
             $sqlAlumno = Alumno::consultarAlumno($_idalumno);
             include_once './views/editar.php';
-            
         break;
         case "editar":
             require_once('./views/editar.php');
         break; 
+        case "insertalumno":
+            require_once('./views/inserAlumno.php');
+        break;
     default:
         require_once('./views/home.php');
 }

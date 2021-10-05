@@ -61,7 +61,7 @@ class Alumno {
         $stmt->execute();
         $resultado = $stmt->get_result();
     }
-    public static function consultarAlumno($_idalumno) {
+    public static function consultarAlumno($_id_alumno) {
         $mysqli = conectadb::dbmysql();
         $stmt = $mysqli->prepare('SELECT * FROM alumno WHERE id_alumno = ?');
         $stmt->bind_param('i', $_idalumno);
@@ -71,11 +71,11 @@ class Alumno {
         return $fila;
     }
   
-    public static function edit($_grupo,$_carrera,$_turno,$_idalumno) {
+    public static function edit($_grupo,$_carrera,$_turno,$id_alumno) {
         $mysqli = conectadb::dbmysql();
         $stmt =$mysqli->prepare ('UPDATE alumno SET grupo =?, carrera =?, turno=? 
         WHERE id_alumno =? ');
-        $stmt->bind_param("ssi",$_grupo,$_carrera,$_turno,$_idalumno);
+        $stmt->bind_param("ssi",$_grupo,$_carrera,$_turno,$id_alumno);
         $stmt -> execute();
         $resultado = $stmt->get_result();
         $acceso = false;
@@ -85,6 +85,18 @@ class Alumno {
         $mysqli->close();
         return $acceso;
         
+    }
+    public static function insert($_id_alumno, $_grupo, $_carrera, $_turno) {
+        $mysqli = conectadb::dbmysql();
+        $stmt = $mysqli->prepare('INSERT INTO alumno(id_alumno, grupo, carrera, turno) VALUE (?,?,?)');
+        $stmt->bind_param("sss", $_id_alumno, $_grupo, $_carrera, $_turno);
+        $stmt->execute();
+        $acceso = false;
+        if ($stmt->affected_rows == 1) {
+            $acceso = true;
+        }
+        $mysqli->close();
+        return $acceso;
     }
 }
 ?>
