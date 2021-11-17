@@ -8,7 +8,7 @@ class conectadb {
         $db_password = '';
         // Base de datos incial
         // $db_db = 'information_schema';
-        $db_db = 'database';
+        $db_db = 'base';
         $mysqli = @new mysqli(
         $db_host,
         $db_user,
