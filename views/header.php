@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="css/style_header.css">
 <?php
 $estado_session = session_status();
 if($estado_session == PHP_SESSION_NONE)
@@ -32,10 +33,10 @@ if (isset($_SESSION['loggedUserName'])) {
                 <a href="index.html" class="brand-logo">Environmental</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="?menu=home">Inicio</a></li>
-                    <li><a href="?menu=acercade">Blog</a></li>
+                    
                     <li><a href="?menu=login">Login</a></li>
                     <li><a href="?menu=registrarse">Sing in</a></li>
-                    <li><a href="?menu=carrusel">Carrusel</a></li>
+                    
                     
                 </ul>
             </div>
