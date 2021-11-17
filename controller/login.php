@@ -9,7 +9,12 @@ if (filter_input_array(INPUT_POST)) {
     if ($loginok){
         header("location: ../index.php?menu=bienvenido");
     } else{
-        echo 'Usuario No Existe o password Incorrecto';
+        /* echo 'Usuario No Existe o password Incorrecto'; */
+        echo '<script>
+
+        window.location = "../index.php?menu=401";
+        
+        </script>';
     }
 }
 ?>

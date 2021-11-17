@@ -56,6 +56,9 @@ switch ($var_getMenu) {
         case "insertalumno":
             require_once('./views/inserAlumno.php');
         break;
+        case "401":
+            require_once('./views/401.php');
+            break;
     default:
         require_once('./views/home.php');
 }
