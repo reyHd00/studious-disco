@@ -12,13 +12,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
 </head>
 
+<style>
+    body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    }
+
+    main {
+        flex: 1 0 auto;
+    }
+</style>
 <body>
     
-    <!--encabezado-->
-    <?php include 'views/header.php' ?>
-    <!--contenedor-->
-    
-    <?php include 'controller/routing.php' ?>
+    <header>
+       <!--encabezado-->
+        <?php include 'views/header.php' ?> 
+    </header>
+
+    <main>    
+        <!--contenedor-->
+        
+        <?php include 'controller/routing.php' ?>
+    </main>
+
     <!--Pie de pagina-->
     <?php include 'views/footer.php' ?>
     
