@@ -1,5 +1,5 @@
 <div class="container">
-<form action="./controller/cambiarDatos.php" method="POST" class="center | z-depth-3 center" >
+<form action="./controller/cambiarDatos.php" method="POST" class="center" >
                     
     <input type="hidden" name="id" value="<?php echo  $sqlAlumno['id']  ?>">
     <input type="text" class="form-control mb-3" name="nombre" placeholder="nombre" value="<?php echo  $sqlAlumno['nombre']  ?>">

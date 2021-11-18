@@ -1,6 +1,15 @@
+<style>
+    .btn-floating{
+    
+    margin-top: 2rem;
+    margin-block-end: 1.5rem;
+    
+}
+</style>
 <?php ?>
-<table class="striped ">
-    <thead class ="black white-text">
+<div class="container">
+    <table class="highlight centered">
+    <thead class ="teal darken-4 white-text">
         <tr>
         <th>Id</th>
         <th>Nombre</th>
@@ -24,11 +33,11 @@
     <?php } ?>
     </td>
     <td>
-    <button class="btn waves-effect waves-light lime darken-2" type="submit" name="action">
+    <button class="btn waves-effect waves-light green darken-1" type="submit" name="action">
     <a href="?menu=editalumno&idalumno=<?php echo $alumnoview->id; ?>">
     <i class="material-icons right white-text">mode_edit</i></a>
     </button>
-    <button class="btn waves-effect waves-light deep-purple accent-1" type="submit" name="action">
+    <button class="btn waves-effect waves-light  red darken-3" type="submit" name="action">
     <a href="?menu=deletealumno&idalumno=<?php echo $alumnoview->id; ?>">
     <i class="material-icons right white-text">delete_forever</i></a>
     </button>
@@ -39,8 +48,14 @@
 
     </tbody>
 </table>
-<table>
-<button class="btn waves-effect waves-light blue" type="submit" name="action">
+<div class=" row center ">
+<!-- <button class="btn-floating btn-large waves-effect waves-light blue" type="submit" name="action">
         <a href="?menu=insertalumno">
-        <i class="material-icons right white-text">add</i></a>
-</table>
+        <i class="material-icons right white-text centered">add</i></a> -->
+
+        <a class="btn-floating btn-large waves-effect waves-light pink darken-3" href="?menu=insertalumno">
+            <i class="material-icons">add</i>
+        </a>
+    </div>
+</div>
+

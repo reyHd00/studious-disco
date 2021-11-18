@@ -14,6 +14,33 @@ if (isset($_SESSION["loggedUserName"])) { ?>
     de hablarnos)"
     -- Dave Barry
     </div>
+
+    <div class="divider"></div>
+    <div class="section">
+        <h5>Anime</h5>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ipsa ut molestiae maxime ipsum repudiandae provident nobis nemo. Maiores, quo?</p>
+        <div class="row center">
+            <img class="responsive-img" src="img/img_anime01.jpg" alt="manga" srcset="">
+        </div>
+    </div>
+    <div class="divider"></div>
+    <div class="section">
+        <h5>Manga</h5>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ipsa ut molestiae maxime ipsum repudiandae provident nobis nemo. Maiores, quo?</p>
+        <div class="row center">
+            <img src="img/img_manga.jpg" alt="manga" srcset="">
+        </div>
+        
+    </div>
+    <div class="divider"></div>
+    <div class="section">
+        <h5>Novelas Ligeras</h5>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ipsa ut molestiae maxime ipsum repudiandae provident nobis nemo. Maiores, quo?</p>
+        <div class="row center">
+            <img src="img/img_nl.jpg" alt="manga" srcset="">
+        </div>
+    </div>
+          
 </div>    
 <?php 
 } else { ?>
